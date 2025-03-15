@@ -1,0 +1,267 @@
+/* ============================= */
+/* === STYLES GÉNÉRAUX === */
+/* ============================= */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e;
+    color: white;
+    width: 340px;
+    height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* ============================= */
+/* === PAGE DE CONNEXION === */
+/* ============================= */
+
+#login-container {
+    background-color: #2c2c2c;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* === Logo ARGOS === */
+#logo {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    align-self: flex-start;
+}
+
+/* === Champs de saisie (email, mot de passe) === */
+#login-form input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #3a3a3a;
+    color: white;
+}
+
+/* === Option "Garder la session ouverte" === */
+.remember-me {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.remember-me input {
+    margin: 0;
+    width: 16px;
+    height: 16px;
+}
+
+.remember-me label {
+    margin-left: 8px;
+}
+
+/* === Bouton de connexion === */
+#login-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #e29f8a;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+/* === Bouton "Mot de passe oublié" === */
+#forgot-password {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: none;
+    color: #bbb;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* ============================= */
+/* === PAGE PRINCIPALE (APP) === */
+/* ============================= */
+
+#app-page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ============================= */
+/* === TOOLBAR (MENU DU HAUT) === */
+/* ============================= */
+
+#toolbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: #2c2c2c;
+    padding: 10px 0;
+    border-bottom: 1px solid #444;
+    width: 100%;
+}
+
+/* === Boutons de la toolbar === */
+#toolbar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    color: #e29f8a;
+    font-size: 12px;
+    width: 33%;
+}
+
+/* === Icônes de la toolbar === */
+#toolbar img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 3px;
+}
+
+/* ============================= */
+/* === CONTENU DES PAGES === */
+/* ============================= */
+
+#content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* === Pages (onglets) === */
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+/* ============================= */
+/* === PAGE COFFRE-FORT === */
+/* ============================= */
+
+#list-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Conteneur de la barre de recherche */
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 10px 0;
+}
+
+/* Icône de recherche */
+.search-container img {
+    position: absolute;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+/* Barre de recherche */
+#search-bar {
+    padding: 10px 10px 10px 35px;
+    width: 100%;
+    background-color: #3a3a3a;
+    border: none;
+    border-radius: 5px;
+    color: white;
+
+}
+
+/* ============================= */
+/* === LISTE DES IDENTIFIANTS === */
+/* ============================= */
+
+/* Conteneur de la liste */
+#identifiers-list {
+    flex-grow: 1;
+    width: 100%;
+    overflow-y: auto;
+    max-height: 350px;
+    padding-top: 10px;
+    background-color: #3a3a3a;
+}
+
+/* Empêche la scrollbar de prendre trop de place */
+#identifiers-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+#identifiers-list::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 10px;
+}
+
+/* Éléments de la liste */
+.identifier-item {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+}
+
+.identifier-item:hover {
+    background-color: #e3b8aa;
+}
+
+/* Icône du site */
+.identifier-item img {
+    width: 32px;
+    height: 32px;
+    border-radius: 5px;
+    margin-right: 20px;
+    background-color: #444; /* Placeholder */
+}
+
+/* Texte à droite de l'icône */
+.identifier-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* URL du site */
+.identifier-info .site-url {
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Email utilisé */
+.identifier-info .email {
+    font-size: 12px;
+    color: #bbb;
+}

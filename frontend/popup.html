@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ARGOS - Connexion</title>
+        <script src="popup.js" defer></script>
+        <link rel="stylesheet" href="popup.css">
+    </head>
+
+    <body>
+        <div id="login-container">
+            <h1 id="logo">ARGOS</h1>
+
+            <form id="login-form">
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Mot de passe" required>
+
+                <div class="remember-me">
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me">Garder la session ouverte pendant 14 jours</label>
+                </div>
+
+                <button type="submit" id="login-btn">Connexion</button>
+            </form>
+
+            <button id="forgot-password">Mot de passe oublié ?</button>
+        </div>
+
+        <div id="app-page" style="display: none;">
+            <div id="toolbar">
+                <button id="btn-list" data-active-icon="icons/toolbar/shield_color.svg" data-inactive-icon="icons/toolbar/shield_white.svg">
+                    <img src="icons/toolbar/shield_white.svg" alt="Identifiants">
+                    <span>Coffre-fort</span>
+                </button>
+                <button id="btn-generator" data-active-icon="icons/toolbar/key_color.svg" data-inactive-icon="icons/toolbar/key_white.svg">
+                    <img src="icons/toolbar/key_white.svg" alt="Générateur">
+                    <span>Générateur</span>
+                </button>
+                <button id="btn-settings" data-active-icon="icons/toolbar/gear_color.svg" data-inactive-icon="icons/toolbar/gear_white.svg">
+                    <img src="icons/toolbar/gear_white.svg" alt="Paramètres">
+                    <span>Paramètres</span>
+                </button>
+            </div>
+
+            <div id="content">
+                <div id="list-page" class="page active">
+                    <div class="search-container">
+                        <img src="icons/search.svg" alt="Rechercher">
+                        <input type="text" id="search-bar" placeholder="Rechercher...">
+                    </div>
+
+                    <div id="identifiers-list">
+                        <!-- Les éléments seront ajoutés dynamiquement ici -->
+                    </div>
+                </div>
+
+                <div id="generator-page" class="page" style="display: none;">
+                    <h2>🔑 Générateur de mot de passe</h2>
+                    <p>Placeholder pour le générateur de mot de passe</p>
+                </div>
+
+                <div id="settings-page" class="page" style="display: none;">
+                    <h2>⚙️ Paramètres</h2>
+                    <p>Placeholder pour les paramètres</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
